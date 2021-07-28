@@ -513,6 +513,24 @@ rules:
       - update
       - delete
   - apiGroups:
+      - ""
+    resources:
+      - persistentvolumeclaims
+    verbs:
+      - delete
+  - apiGroups:
+      - apps
+    resources:
+      - deployments/scale
+    verbs:
+      - patch
+  - apiGroups:
+      - apps
+    resources:
+      - deployments
+    verbs:
+      - delete
+  - apiGroups:
       - batch
     resources:
       - jobs
